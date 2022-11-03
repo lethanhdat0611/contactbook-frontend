@@ -1,16 +1,19 @@
-<script> export default {
-
-}
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+export default {
+    components: {
+    AppHeader,
+    },
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-    <h1>Hello, Vue.js!</h1>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
     </div>
-  </header>
+  </div>
 
   <main>
     <TheWelcome />
