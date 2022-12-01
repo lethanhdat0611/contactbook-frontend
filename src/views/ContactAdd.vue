@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <h4>Thêm Liên hệ</h4>
+        <h4>Thêm thông tin nhân viên</h4>
         <ContactForm 
             :contact="contact" 
             @submit:contact="postContact"
