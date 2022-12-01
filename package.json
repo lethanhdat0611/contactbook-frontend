@@ -1,5 +1,5 @@
 {
-  "name": "employeemanager-frontend",
+  "name": "contact-frontend",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
