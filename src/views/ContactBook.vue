@@ -113,7 +113,7 @@ export default {
                 this.activeIndex = -1;
             },
             async removeAllContacts() {
-                if (confirm("Bạn muốn xóa tất cả Liên hệ?")) {
+                if (confirm("Bạn muốn xóa tất cả thông tin nhân viên?")) {
                     try {
                         await ContactService.deleteAll();
                         this.refreshList();
