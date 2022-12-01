@@ -3,57 +3,44 @@
         @submit="submitContact"
         :validation-schema="contactFormSchema"
     >
-        <div class="form-group">
-            <label for="name">Tên</label>
-            <Field
-                name="name"
-                type="text"
-                class="form-control"
-                v-model="contactLocal.name"
-            />
-            <ErrorMessage name="name" class="error-feedback" />
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Tên</span>
+            <Field name="name" type="text" class="form-control" placeholder="Nhập tên nhân viên"  aria-describedby="basic-addon1" v-model="contactLocal.name"/>
+            
         </div>
-        <div class="form-group">
-            <label for="email">E-mail</label>
-            <Field
-                name="email"
-                type="email"
-                class="form-control"
-                v-model="contactLocal.email"
-            />
-            <ErrorMessage name="email" class="error-feedback" />
+   
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ngày sinh</span>
+            <Field name="birthday" type="date" class="form-control" placeholder="Nhập ngày sinh" aria-label="Userbirthday" aria-describedby="basic-addon1" v-model="contactLocal.birthday"/>
+            
         </div>
-        <div class="form-group">
-            <label for="address">Địa chỉ</label>
-            <Field
-                name="address"
-                type="text"
-                class="form-control"
-                v-model="contactLocal.address"
-            />
-            <ErrorMessage name="address" class="error-feedback" />
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Công việc</span>
+            <Field name="work" type="text" class="form-control" placeholder="Nhập tên công việc" aria-label="Userwork" aria-describedby="basic-addon1" v-model="contactLocal.work"/>  
         </div>
-        <div class="form-group">
-            <label for="phone">Điện thoại</label>
-            <Field
-                name="phone"
-                type="tel"
-                class="form-control"
-                v-model="contactLocal.phone"
-            />
-            <ErrorMessage name="phone" class="error-feedback" />
-        </div>
-
-        <div class="form-group form-check">
-            <input
-                name="favorite"
-                type="checkbox"
-                class="form-check-input"
-                v-model="contactLocal.favorite"
-            />
-            <label for="favorite" class="form-check-label">
-                <strong>Liên hệ yêu thích</strong>
+        <div class="form-check">
+            <Field v-model="contactLocal.gender" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Nam"/>
+            <label class="form-check-label" for="flexRadioDefault1">
+                Nam
             </label>
+          </div>
+          <div class="form-check">
+            <Field v-model="contactLocal.gender"  class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Nữ" checked/>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Nữ
+            </label>
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+            <Field name="email" type="email" class="form-control" placeholder="Nhập Email" aria-label="Useremail" aria-describedby="basic-addon1" v-model="contactLocal.email" />
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Địa chỉ</span>
+            <Field name="address" type="text" class="form-control" placeholder="Nhập Địa chỉ" aria-label="Useraddress" aria-describedby="basic-addon1" v-model="contactLocal.address"/>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Điện thoại</span>
+            <Field name="phone" type="tel" class="form-control" placeholder="Nhập Điện thoại" aria-label="Userphone" aria-describedby="basic-addon1" v-model="contactLocal.phone"/>
         </div>
 
         <div class="form-group">

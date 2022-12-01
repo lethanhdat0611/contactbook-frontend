@@ -16,24 +16,10 @@ export default {
 </script>
 
 <template>
-    <div class="input-group">
-        <input
-        type="text" 
-        class="form-control" 
-        placeholder="Nhập thông tin cần tìm" 
-        :value="modelValue" 
-        @input="updateModelValue" 
-        @keyup.enter="submit" 
-        />
-    
-    <div class="input-group-append">
-        <button
-        class="btn btn-outline-secondary" 
-        type="button" 
-        @click="submit"
-        >
-        <i class="fas fa-search"></i> Tìm kiếm
-        </button>
-    </div>
-</div>
+
+    <form class="d-flex" style="background-color: gray-200">
+        <input class="form-control me-2" type="search" placeholder="Nhập tên nhân viên" aria-label="Search" :value="modelValue" 
+@input="updateModelValue" @keyup.enter="submit" >
+        <button class="btn btn-outline-success" type="button" @click="submit">Search</button>
+      </form>
 </template>

@@ -22,7 +22,7 @@ export default{
             :class="{ active: index === activeIndex }"
             @click="updateActiveIndex(index)"
         >
-            {{ contact.name }}
+            {{ contact.name }}   |  {{ contact.work }}     {{ contact.email }}
         </li>
     </ul>
 </template>

@@ -16,17 +16,24 @@ export default{
             {{ contact.email }}
         </div>
         <div class="p-1">
+            <strong>Gender:</strong>
+            {{ contact.gender }}
+        </div>
+        <div class="p-1">
+            <strong>Ngày sinh:</strong>
+            {{ contact.birthday }}
+        </div>
+        <div class="p-1">
+            <strong>Công việc:</strong>
+            {{ contact.work }}
+        </div>
+        <div class="p-1">
             <strong>Địa chỉ:</strong> 
             {{ contact.address }}
         </div>
         <div class="p-1">
             <strong>Điện thoại:</strong> 
             {{ contact.phone }}
-        </div>
-        <div class="p-1">
-            <strong>Liên hệ yêu thích:&nbsp;</strong> 
-            <i v-if="contact.favorite" class="fas fa-check"></i> 
-            <i v-else class="fas fa-times"></i>
         </div>
     </div>
 </template>

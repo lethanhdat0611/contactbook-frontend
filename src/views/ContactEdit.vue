@@ -50,14 +50,14 @@ export default {
         async updateContact(data) {
             try {
                 await ContactService.update(this.contact._id, data);
-                this.message = "Liên hệ được cập nhật thành công.";
+                this.message = "Thông tin được cập nhật thành công.";
             } catch (error) {
                 console.log(error);
             }
         },
 
         async deleteContact() {
-            if (confirm("Bạn muốn xóa Liên hệ này?")) {
+            if (confirm("Bạn muốn xóa nhân viên này?")) {
                 try {
                     await ContactService.delete(this.contact._id);
                     this.$router.push({ name: "contactbook" });
